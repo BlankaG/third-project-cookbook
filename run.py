@@ -1,8 +1,20 @@
 import os
-from flask import Flask, render_template
-
+from flask import Flask, render_template, redirect, render_template, url_for
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 app = Flask(__name__)
+
+#app.config["MONGO_DBNAME"] = 'Recipes'
+app.config["MONGO_URI"] = "mongodb+srv://blanka:blanka@cluster0.w783e.mongodb.net/Recipes?retryWrites=true&w=majority"
+
+mongo = PyMongo(app)
+
+@app.route('/')
+@app.route('/get_recipes')
+def get_recipes():
+    return render_template("about.html", recipes=mongo.db.recipes.find())
+
 
 
 @app.route("/")
