@@ -1,7 +1,8 @@
 import os
-from flask import Flask, render_template, redirect, render_template, url_for
+from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from pymongo import database
 
 app = Flask(__name__)
 

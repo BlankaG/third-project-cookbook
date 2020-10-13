@@ -5,7 +5,11 @@
 <h1>International cuisines</h1>
 
      {% for recipe in recipes %}
+     {{recipe.category_name}}
      {{recipe.recipe_name}}
+     {{recipe.ingredients}}
+     {{recipe.allergens}}
+     {{recipe.cooking_instructions}}
 {% endfor %}
      
 {% endblock %}
