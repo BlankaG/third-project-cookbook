@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
      {% for recipe in recipes %}
         {{ recipe.recipe_name }}
+        {{ recipe.recipe_ingredients}}
+        {{recipe.recipe_allergens}}
+        {{recipe.cooking_steps}}
      {% endfor %}
      
 {% endblock %}
