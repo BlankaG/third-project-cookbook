@@ -4,7 +4,7 @@
  
      {% for recipe in recipes %} 
      <div class="row">
-     <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+     <div class="col-12 col-md-6">
 <div class="card-container">
   <div class="card u-clearfix">
     <div class="card-body">
@@ -12,21 +12,32 @@
       <span class="card-author subtle"><strong>Allergies:</strong><br> {{recipe.recipe_allergens}}</span>
       <h2 class="card-title"> {{ recipe.recipe_name }}</h2>
       <span class="card-description subtle"><strong>Ingredients:</strong><br>  {{ recipe.recipe_ingredients}}</span>
-      <div class="card-read">Read</div>
-      <span class="card-tag card-circle subtle"><strong>Let's Cook it!<br></strong></span><span class="hide"> {{ recipe.cooking_steps }}</span>
+      <button onclick="myFunction()">More...</button>
+      <div id="myDIV"> {{ recipe.cooking_steps }} </div>
     </div>
-    <img src="https://images.pexels.com/photos/3338537/pexels-photo-3338537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="card-media" />
+    <img class="recipe_image" src="{{ recipe.recipe_image}}">
   </div>
   <div class="card-shadow"></div>
 </div>
 </div>
+
+{% endfor %}
+
+<div class="col-12 col-md-6">
+<h1>Share you Favourite Recipe</h1>
+</div>
+
 <script>
-$(".hide").hide();
+function myFunction() {
+    var x =
+  document.getElementById("myDIV");
+  if (x.style.display ==="none")  
+  {
+      x.style.display = "block";
+  }   else {
+      x.style.display = "none";
+  }
+}
 </script>
 
-  {% endfor %}
-
-
-  
-
-{% endblock %}
+ {% endblock %}
