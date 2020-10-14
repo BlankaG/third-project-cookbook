@@ -13,68 +13,20 @@
       <h2 class="card-title"> {{ recipe.recipe_name }}</h2>
       <span class="card-description subtle"><strong>Ingredients:</strong><br>  {{ recipe.recipe_ingredients}}</span>
       <div class="card-read">Read</div>
-      <span class="card-tag card-circle subtle"><strong>Let's Cook it!<br></strong>{{recipe.cooking_steps}}</span>
+      <span class="card-tag card-circle subtle"><strong>Let's Cook it!<br></strong></span><span class="hide"> {{ recipe.cooking_steps }}</span>
     </div>
     <img src="https://images.pexels.com/photos/3338537/pexels-photo-3338537.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="card-media" />
   </div>
   <div class="card-shadow"></div>
 </div>
 </div>
+<script>
+$(".hide").hide();
+</script>
+
   {% endfor %}
 
 
-{% for recipe in recipes %} 
-<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-<div class="card-container">
-  <div class="card u-clearfix">
-    <div class="card-body">
-      <span class="card-number card-circle subtle">01</span>
-      <span class="card-author subtle"><strong>Allergies:</strong><br> {{recipe.recipe_allergens}}</span>
-      <h2 class="card-title">{{ recipe.recipe_name }}</h2>
-      <span class="card-description subtle"><strong>Ingredients:</strong><br>  {{ recipe.recipe_ingredients}}</span>
-      <div class="card-read">Read</div>
-      <span class="card-tag card-circle subtle"><strong>Let's Cook it!<br></strong>{{recipe.cooking_steps}}</span>
-    </div>
-    <img src="https://images.pexels.com/photos/3619859/pexels-photo-3619859.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="card-media" />
-  </div>
-  <div class="card-shadow"></div>
-</div>
-</div>
-  {% endfor %}
-
-<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-<div class="card-container">
-  <div class="card u-clearfix">
-    <div class="card-body">
-      <span class="card-number card-circle subtle">01</span>
-      <span class="card-author subtle">John Smith</span>
-      <h2 class="card-title">New Brunch Recipe</h2>
-      <span class="card-description subtle">These last few weeks I have been working hard on a new brunch recipe for you all.</span>
-      <div class="card-read">Read</div>
-      <span class="card-tag card-circle subtle">C</span>
-    </div>
-    <img src="https://s15.postimg.cc/temvv7u4r/recipe.jpg" alt="" class="card-media" />
-  </div>
-  <div class="card-shadow"></div>
-</div>
-</div>
-<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-<div class="card-container">
-  <div class="card u-clearfix">
-    <div class="card-body">
-      <span class="card-number card-circle subtle">01</span>
-      <span class="card-author subtle">John Smith</span>
-      <h2 class="card-title">New Brunch Recipe</h2>
-      <span class="card-description subtle">These last few weeks I have been working hard on a new brunch recipe for you all.</span>
-      <div class="card-read">Read</div>
-      <span class="card-tag card-circle subtle">C</span>
-    </div>
-    <img src="https://s15.postimg.cc/temvv7u4r/recipe.jpg" alt="" class="card-media" />
-  </div>
-  <div class="card-shadow"></div>
-</div>
-</div>
-</div>
-
+  
 
 {% endblock %}
