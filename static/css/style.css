@@ -45,7 +45,6 @@ html {
 
 .card-body {
   display: inline-block;
-  float: left;
   width: 310px;
 }
 
@@ -114,7 +113,7 @@ html {
 }
 
 .card-media {
-  float: left;
+  float: center;
 }
 
 .card-shadow {
