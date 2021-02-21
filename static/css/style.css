@@ -1,4 +1,3 @@
-
 html {
   background: #FAF7F2;
   background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
@@ -113,7 +112,7 @@ html {
 }
 
 .card-media {
-  float: center;
+  float: left;
 }
 
 .card-shadow {
